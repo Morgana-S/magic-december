@@ -1,0 +1,35 @@
+{
+  // File Exclusions
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.github": true,
+    "**/.gitp*": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/.vscode": true,
+    "**/CVS": true,
+    "**/core.Microsoft*": true,
+    "**/core.mongo*": true,
+    "**/core.python*": true,
+    ".coverage": true,
+    ".pytest_cache": true,
+    ".ruff_cache": true,
+    "Makefile": true,
+    "pyproject.toml": true
+  },
+  // Prettier settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  // Live Server settings
+  "liveServer.settings.port": 5500,
+  // HTML CSS Class Completion settings
+  "html-css-class-completion.enableEmmetSupport": true,
+  // Path Intellisense settings
+  "path-intellisense.autoSlashAfterDirectory": true
+}
