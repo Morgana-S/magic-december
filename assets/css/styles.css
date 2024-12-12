@@ -1,3 +1,15 @@
+
+body {
+  font-family: 'Vesper Libre', serif;
+  background-color: #ee6249;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .calendar-day {
   height: auto;
   border-radius: 10px;
