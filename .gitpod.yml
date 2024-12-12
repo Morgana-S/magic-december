@@ -6,9 +6,8 @@ vscode:
     - ritwickdey.LiveServer
     - xabikos.JavaScriptSnippets
     - christian-kohler.path-intellisense
-    - pranaygp.vscode-css-peek
     - zignd.html-css-class-completion
     - formulahendry.auto-rename-tag
     - formulahendry.auto-close-tag
-    - coenraads.bracket-pair-colorizer-2
     - yzhang.markdown-all-in-one
+    - Zignd.html-css-class-completion
