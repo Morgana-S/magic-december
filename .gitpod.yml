@@ -1,0 +1,12 @@
+vscode:
+  extensions:
+    - matt-rudge.auto-open-preview-panel
+    - ecmel.vscode-html-css
+    - esbenp.prettier-vscode
+    - ritwickdey.LiveServer
+    - xabikos.JavaScriptSnippets
+    - christian-kohler.path-intellisense
+    - zignd.html-css-class-completion
+    - formulahendry.auto-rename-tag
+    - formulahendry.auto-close-tag
+    - yzhang.markdown-all-in-one
