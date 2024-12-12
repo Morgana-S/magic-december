@@ -6,10 +6,16 @@
 
 ## Criteria
 ### The project fits the theme of celebrating the holidays.
+- Our project is focused on not only celebrating Christmas, but the variety of holidays and festivals that are celebrated around the world. With each day on the calendar, we have tried to provide a relevant celebration that occurs on that day; however, we have also chosen several major celebrations that occur at different times of the year. While Christmas is the main holiday that people are thinking about right now, there's no reason not to maintain that festive spirit throughout the year. 
 ### The project is well planned and executed (Using GitHub Projects/Kanban)
+- Project management was carried out through GitHub Projects, the issues page, and Slack. Regular huddles were carried out on slack to ensure that people were happy with their responsibilities and that there weren't any blockers in the way of progress. We deployed to GitHub pages early to allow us to view the website in a deployed version for the purposes of testing and feedback.
 ### The project has a basic README that follows the provided template.
+- The README file was constructed early in the project and updated with features, credit and information regularly to ensure it kept pace with the project. 
+
 ### The project has an overall sense of completeness.
+
 ### The project showcases a strong sense of creativity and originality.
+- We believe that our project derives its purpose from the true core of the holiday period - a sense of inclusivity, festivity and togetherness. We took information provided by websites that specialise in the subject matter, formatted the content in a way that makes it accessible and exciting the end-user to view, and we gave the user the ability to find out more information if they desire. We strongly feel this kindles the thirst for knowledge and understanding of other cultures and ways of celebrating the festive period in an original way.
 
 ## About
 Magic Calendar is a festive, advent-style calendar with selectable cards. 
@@ -18,7 +24,7 @@ Our project is unique as it uses the motif of a local holiday tradition (advent 
 
 ## Goal
 ### Problem Statement:
-**At this time of year, everyone is thinking about celebrating the festive period - but we don't actually know much about how the world celebrates. Our project aims to provide insight into the many kinds of celebrations that occur around the world.**
+**At this time of year, everyone is thinking about celebrating the festive period - but we don't actually know much about how the world celebrates. Our project aims to provide insight into the many kinds of festivals and holiday celebrations that occur around the world.**
 
 ### Objectives:
 - To create a website which allows the user to learn more about different festival celebrations around the world.
