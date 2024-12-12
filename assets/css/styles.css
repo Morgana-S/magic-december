@@ -10,6 +10,25 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+h1.gif-background {
+  position: relative;
+  font-size: 3rem;
+  color: rgb(251, 245, 235);/* Ensure text is readable */
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  height: 200px; /* Adjust height as needed to display the GIF */
+  background-image: url('../images/coverimage.webp'); /* Correct path to your GIF */
+  background-size: cover; /* Ensure the GIF covers the entire element */
+  background-repeat: no-repeat; /* Prevent repeating the GIF */
+  background-position: center; /* Center the GIF */
+  display: flex; /* Center text inside */
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Improve text readability */
+}
+
+
 .calendar-day {
   height: auto;
   border-radius: 10px;
