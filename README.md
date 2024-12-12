@@ -55,6 +55,7 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 ### Content
 - [National Today](https://nationaltoday.com/) - Information on holidays and festivals
 - [Days of the Year](https://www.daysoftheyear.com/) - Further information on holidays and festivals for content
+- [Pixabay](https://pixabay.com/) - Cover image
 
 ### Libraries and Frameworks
 
