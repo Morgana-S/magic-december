@@ -12,22 +12,21 @@ h1 {
 
 h1.gif-background {
   position: relative;
-  font-size: 3rem;
-  color: rgb(251, 245, 235);/* Ensure text is readable */
+  font-size: 4rem; /* Increase the text size */
+  color: rgb(251, 245, 235); /* Ensure text is readable */
   font-weight: bold;
   text-align: center;
-  padding: 20px;
-  height: 200px; /* Adjust height as needed to display the GIF */
-  background-image: url('../images/coverimage.webp'); /* Correct path to your GIF */
-  background-size: cover; /* Ensure the GIF covers the entire element */
-  background-repeat: no-repeat; /* Prevent repeating the GIF */
-  background-position: center; /* Center the GIF */
-  display: flex; /* Center text inside */
+  padding: 40px 20px; /* Add more padding for better spacing */
+  height: 300px; /* Increase height to display more of the cover image */
+  background-image: url('../images/coverimage.webp'); /* Ensure path to the cover image is correct */
+  background-size: cover; /* Make the image cover the entire background */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-position: center; /* Center the image */
+  display: flex; /* Center the content vertically and horizontally */
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Improve text readability */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Enhance text readability with a stronger shadow */
 }
-
 
 .calendar-day {
   height: auto;
