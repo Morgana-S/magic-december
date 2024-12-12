@@ -31,5 +31,8 @@
   // HTML CSS Class Completion settings
   "html-css-class-completion.enableEmmetSupport": true,
   // Path Intellisense settings
-  "path-intellisense.autoSlashAfterDirectory": true
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
