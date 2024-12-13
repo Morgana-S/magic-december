@@ -1,9 +1,7 @@
-# Magic Calendar - A Showcase of Festive Holidays from around the world
+# Magic December - A Showcase of Festivals, Holidays and Celebrations from around the world
 <!-- Add image of responsive design showcase here -->
 ## Deployment
-### Deployment to GitHub Pages
-<!-- Include information about the deployment here -->
-
+The project is deployed and can be accessed at: https://jamie-gargrave.github.io/magic-calendar/
 ## Criteria
 ### The project fits the theme of celebrating the holidays.
 - Our project is focused on not only celebrating Christmas, but the variety of holidays and festivals that are celebrated around the world. With each day on the calendar, we have tried to provide a relevant celebration that occurs on that day; however, we have also chosen several major celebrations that occur at different times of the year. While Christmas is the main holiday that people are thinking about right now, there's no reason not to maintain that festive spirit throughout the year. 
@@ -13,12 +11,13 @@
 - The README file was constructed early in the project and updated with features, credit and information regularly to ensure it kept pace with the project. 
 
 ### The project has an overall sense of completeness.
+- We focused on getting a version of the site deployed early, using GitHub Projects to prioritise essential work and issues. After we had the foundation of the site down, we then proceeded to work on polishing existing functionality.
 
 ### The project showcases a strong sense of creativity and originality.
 - We believe that our project derives its purpose from the true core of the holiday period - a sense of inclusivity, festivity and togetherness. We took information provided by websites that specialise in the subject matter, formatted the content in a way that makes it accessible and exciting the end-user to view, and we gave the user the ability to find out more information if they desire. We strongly feel this kindles the thirst for knowledge and understanding of other cultures and ways of celebrating the festive period in an original way.
 
 ## About
-Magic Calendar is a festive, advent-style calendar with selectable cards. 
+Magic December is a festive, advent-style calendar with selectable cards. 
 The purpose of the calendar is to provide insight into many of the widely celebrated seasonal festivals and holidays around the world. 
 Our project is unique as it uses the motif of a local holiday tradition (advent calendars) to provide content to the user - the nature of the advent calendar format allows for new content to be provided every day.
 
@@ -30,11 +29,14 @@ Our project is unique as it uses the motif of a local holiday tradition (advent 
 - To create a website which allows the user to learn more about different festival celebrations around the world.
 - The website should be fun, enticing, and allow the user to find out more on holidays and festivals they're interested in.
 - The website should be colorful to reflect the festive theme.
+
 ### Target Audience:
 - Users looking to find out more about how festivals are celebrated around the world.
 - Users looking for an interactive and fun way to learn about other cultures.
 
 ### Benefits:
+- Users have a centralised location to find out about the various celebrations that are taking place at this time of year.
+- The information provided is comprehensive, but we also allow users to go ahead and find out more information for themselves. 
 
 ## UI/UX Design
 The wireframes for the website's design can be found [here.](/documentation/wireframes/magic-calendar.pdf)
@@ -62,8 +64,14 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [National Today](https://nationaltoday.com/) - Information on holidays and festivals
 - [Days of the Year](https://www.daysoftheyear.com/) - Further information on holidays and festivals for content
 - [Pixabay](https://pixabay.com/) - Cover image
+- [SVGRepo](https://www.svgrepo.com/) - Icons and vectors for project page
+- [Lexica](https://lexica.art/) - Image assets for project
+- [D23](https://d23.com/about-walt-disney/) - Image asset for Walt Disney Day
+- [Greaves Travel India](https://www.greavesindia.co.uk/these-are-the-most-beautiful-sights-in-bhutan/) - Image for Bhutan Day
+- [Wikipedia: Flag of Bhutan](https://en.wikipedia.org/wiki/Flag_of_Bhutan#/media/File:Flag_of_Bhutan.svg) - Image for Bhutan Flag
+- [ThoughtCo & National Archive and Records Administration](https://www.thoughtco.com/germans-to-america-1421984) - Image of German Migrants for Migrant Day
 
-### Libraries and Frameworks
+### Libraries, Tools and Frameworks
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Page structure and content.
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Page appearance and styling rules.
@@ -78,6 +86,9 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [GitHub Issues](https://github.com/features/issues) - Project management, issue reporting.
 - [GitHub Pages](https://pages.github.com/) - Project deployment.
 - [Perplexity AI](https://www.perplexity.ai/) - Assistance with content formatting
+- [Canva](https://www.canva.com/en_gb/) - Creation of the numbers for each calendar card.
+- [RemoveBG](https://www.remove.bg/) - Removing the background from some images.
+- [Adobe Firefly](https://www.adobe.com/uk/products/firefly.html) - Generative AI Assets for numbers on each card.
 
 ### Contributors
 #### Team - The Ho Ho Homies:
