@@ -64,6 +64,12 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [National Today](https://nationaltoday.com/) - Information on holidays and festivals
 - [Days of the Year](https://www.daysoftheyear.com/) - Further information on holidays and festivals for content
 - [Pixabay](https://pixabay.com/) - Cover image
+- [SVGRepo](https://www.svgrepo.com/) - Icons and vectors for project page
+- [Lexica](https://lexica.art/) - Image assets for project
+- [D23](https://d23.com/about-walt-disney/) - Image asset for Walt Disney Day
+- [Greaves Travel India](https://www.greavesindia.co.uk/these-are-the-most-beautiful-sights-in-bhutan/) - Image for Bhutan Day
+- [Wikipedia: Flag of Bhutan](https://en.wikipedia.org/wiki/Flag_of_Bhutan#/media/File:Flag_of_Bhutan.svg) - Image for Bhutan Flag
+- [ThoughtCo & National Archive and Records Administration](https://www.thoughtco.com/germans-to-america-1421984) - Image of German Migrants for Migrant Day
 
 ### Libraries, Tools and Frameworks
 
@@ -82,13 +88,6 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [Perplexity AI](https://www.perplexity.ai/) - Assistance with content formatting
 - [Canva](https://www.canva.com/en_gb/) - Creation of the numbers for each calendar card.
 - [RemoveBG](https://www.remove.bg/) - Removing the background from some images.
-- [SVGRepo](https://www.svgrepo.com/) - Icons and vectors for project page
-- [Lexica](https://lexica.art/) - Image assets for project
-- [D23](https://d23.com/about-walt-disney/) - Image asset for Walt Disney Day
-- [Greaves Travel India](https://www.greavesindia.co.uk/these-are-the-most-beautiful-sights-in-bhutan/) - Image for Bhutan Day
-- [Wikipedia: Flag of Bhutan](https://en.wikipedia.org/wiki/Flag_of_Bhutan#/media/File:Flag_of_Bhutan.svg) - Image for Bhutan Flag
-- [ThoughtCo & National Archive and Records Administration](https://www.thoughtco.com/germans-to-america-1421984) - Image of German Migrants for Migrant Day
-
 
 ### Contributors
 #### Team - The Ho Ho Homies:
