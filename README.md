@@ -83,6 +83,7 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [Canva](https://www.canva.com/en_gb/) - Creation of the numbers for each calendar card.
 - [RemoveBG](https://www.remove.bg/) - Removing the background from some images.
 - [SVGRepo](https://www.svgrepo.com/) - Icons and vectors for project page
+- [Lexica](https://lexica.art/) - Image assets for project
 
 ### Contributors
 #### Team - The Ho Ho Homies:
