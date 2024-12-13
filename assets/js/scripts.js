@@ -6,6 +6,9 @@ async function loadDays() {
   if (calendarDaysElement) {
     calendarDaysElement.innerHTML = data;
 
+    // Load the bell sound
+    const bellSound = new Audio('assets/sound/bell.mp3');
+
     // Select all day elements
     const dayElements = document.querySelectorAll('.calendar-day');
 
@@ -24,6 +27,12 @@ async function loadDays() {
         dayElement.setAttribute('data-bs-target', `#day${dayNumber}`);
         dayElement.style.cursor = 'pointer'; // Reset cursor to pointer
         dayElement.classList.remove('disabled'); // Remove disabled class
+
+        // Add click event to play the bell sound
+        dayElement.addEventListener('click', () => {
+          bellSound.currentTime = 0; // Reset sound to the beginning
+          bellSound.play(); // Play the sound
+        });
       }
 
       // Tooltip logic
