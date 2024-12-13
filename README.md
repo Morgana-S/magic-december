@@ -1,4 +1,4 @@
-# Magic December - A Showcase of Festive Holidays from around the world
+# Magic December - A Showcase of Festivals, Holidays and Celebrations from around the world
 <!-- Add image of responsive design showcase here -->
 ## Deployment
 The project is deployed and can be accessed at: https://jamie-gargrave.github.io/magic-calendar/
@@ -29,6 +29,7 @@ Our project is unique as it uses the motif of a local holiday tradition (advent 
 - To create a website which allows the user to learn more about different festival celebrations around the world.
 - The website should be fun, enticing, and allow the user to find out more on holidays and festivals they're interested in.
 - The website should be colorful to reflect the festive theme.
+
 ### Target Audience:
 - Users looking to find out more about how festivals are celebrated around the world.
 - Users looking for an interactive and fun way to learn about other cultures.
@@ -79,6 +80,9 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [GitHub Issues](https://github.com/features/issues) - Project management, issue reporting.
 - [GitHub Pages](https://pages.github.com/) - Project deployment.
 - [Perplexity AI](https://www.perplexity.ai/) - Assistance with content formatting
+- [Canva](https://www.canva.com/en_gb/) - Creation of the numbers for each calendar card.
+- [RemoveBG](https://www.remove.bg/) - Removing the background from some images.
+- [SVGRepo](https://www.svgrepo.com/) - Icons and vectors for project page
 
 ### Contributors
 #### Team - The Ho Ho Homies:
