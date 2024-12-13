@@ -36,7 +36,8 @@ h1.gif-background {
   transition: transform 0.36s ease;
 }
 .calendar-day:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  background-color: #fff !important;
 }
 
 /* Modal Content Styling */
