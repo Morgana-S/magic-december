@@ -138,6 +138,22 @@ h1.gif-background {
   opacity: 1;
 }
 
+/* Highlight Current Day */
+.highlight-current-day {
+  animation: highlight 1s ease-in-out infinite alternate;
+}
+
+@keyframes highlight {
+  from {
+    background-color: #ffeb3b; /* Highlight color */
+    transform: scale(1);
+  }
+  to {
+    background-color: #fff176; /* Slightly different highlight color */
+    transform: scale(1.05);
+  }
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
   .modal-content {
