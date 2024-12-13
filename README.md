@@ -88,6 +88,7 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [Perplexity AI](https://www.perplexity.ai/) - Assistance with content formatting
 - [Canva](https://www.canva.com/en_gb/) - Creation of the numbers for each calendar card.
 - [RemoveBG](https://www.remove.bg/) - Removing the background from some images.
+- [Adobe Firefly](https://www.adobe.com/uk/products/firefly.html) - Generative AI Assets for numbers on each card.
 
 ### Contributors
 #### Team - The Ho Ho Homies:
