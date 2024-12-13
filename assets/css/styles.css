@@ -37,7 +37,7 @@ h1.gif-background {
 }
 .calendar-day:hover {
   transform: scale(1.05);
-  background-color: #fff !important;
+  background-color: #fff;
 }
 
 /* Modal Content Styling */
