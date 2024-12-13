@@ -12,33 +12,37 @@ async function loadDays() {
     dayElements.forEach((dayElement, index) => {
       const dayNumber = index + 1; // Adjust index to start from 1
 
-      // Make days 19 to 23 unclickable
       if (dayNumber >= 19 && dayNumber <= 23) {
+        // Make days 19 to 23 unclickable
         dayElement.removeAttribute('data-bs-toggle'); // Remove modal toggle attribute
         dayElement.removeAttribute('data-bs-target'); // Remove modal target attribute
         dayElement.style.cursor = 'not-allowed'; // Change cursor to indicate it's not clickable
-        dayElement.classList.add('disabled'); // Optionally add a class for further styling
+        dayElement.classList.add('disabled'); // Add a disabled class
+      } else {
+        // Ensure other days are clickable
+        dayElement.setAttribute('data-bs-toggle', 'modal');
+        dayElement.setAttribute('data-bs-target', `#day${dayNumber}`);
+        dayElement.style.cursor = 'pointer'; // Reset cursor to pointer
+        dayElement.classList.remove('disabled'); // Remove disabled class
       }
 
-      // Set tooltip messages dynamically
-      const tooltipMessage =
-        dayNumber >= 19 && dayNumber <= 23
-          ? 'This day is not clickable'
-          : `Day ${dayNumber}`;
-      dayElement
-        .querySelector('.tooltip-wrapper')
-        .setAttribute('data-bs-toggle', 'tooltip');
-      dayElement
-        .querySelector('.tooltip-wrapper')
-        .setAttribute('data-bs-placement', 'top');
-      dayElement
-        .querySelector('.tooltip-wrapper')
-        .setAttribute('title', tooltipMessage);
+      // Tooltip logic
+      const tooltipWrapper = dayElement.querySelector('.tooltip-wrapper');
+      if (tooltipWrapper) {
+        tooltipWrapper.setAttribute('data-bs-toggle', 'tooltip');
+        tooltipWrapper.setAttribute('data-bs-placement', 'top');
+        tooltipWrapper.setAttribute(
+          'title',
+          dayNumber >= 19 && dayNumber <= 23
+            ? 'This day is not clickable'
+            : `Day ${dayNumber}`
+        );
+      }
     });
 
     // Enable Bootstrap tooltips
     const tooltipTriggerList = [].slice.call(
-      document.querySelectorAll('[data-bs-toggle="tooltip"]'),
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
     );
     tooltipTriggerList.forEach(function (tooltipTriggerEl) {
       new bootstrap.Tooltip(tooltipTriggerEl);
@@ -53,6 +57,7 @@ function enableCurrentDays() {
     const dayElement = document.querySelector(`[data-bs-target="#day${i}"]`);
     if (dayElement) {
       dayElement.classList.remove('disabled');
+      dayElement.style.cursor = 'pointer'; // Reset cursor to pointer
       if (i === currentDay) {
         dayElement.classList.add('highlight-current-day'); // Add class for animation
       }
