@@ -145,11 +145,11 @@ h1.gif-background {
 
 @keyframes highlight {
   from {
-    background-color: #ffeb3b; /* Highlight color */
+    background-color: #fff176; /* Highlight color */
     transform: scale(1);
   }
   to {
-    background-color: #fff176; /* Slightly different highlight color */
+    background-color: #ffeb3b; /* Slightly different highlight color */
     transform: scale(1.05);
   }
 }
