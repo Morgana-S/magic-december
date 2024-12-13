@@ -1,3 +1,28 @@
+let isMuted = false;
+
+// Function to toggle mute state
+function toggleMute() {
+  isMuted = !isMuted;
+  console.log(`Mute toggled: ${isMuted}`); // Debugging log
+
+  const muteButton = document.getElementById('mute-button');
+  if (muteButton) {
+    muteButton.textContent = isMuted ? 'Unmute' : 'Mute';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  // Attach toggleMute to the mute button
+  const muteButton = document.getElementById('mute-button');
+  if (muteButton) {
+    muteButton.addEventListener('click', toggleMute);
+  }
+
+  // Initialize the calendar
+  await initialize();
+});
+
+
 // Function to load the days content into the calendar
 async function loadDays() {
   const response = await fetch('partials/days.html');
@@ -30,9 +55,11 @@ async function loadDays() {
 
         // Add click event to play the bell sound
         dayElement.addEventListener('click', () => {
-          bellSound.currentTime = 0; // Reset sound to the beginning
-          bellSound.play(); // Play the sound
-        });
+          if (!isMuted) { // Play the sound only if not muted
+            bellSound.currentTime = 0; // Reset sound to the beginning
+            bellSound.play(); // Play the bell sound
+          }
+        });        
       }
 
       // Tooltip logic
