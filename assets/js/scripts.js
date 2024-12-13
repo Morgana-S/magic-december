@@ -57,9 +57,27 @@ async function loadModals() {
   }
 }
 
+// Function to get the current day of the month
+function getCurrentDay() {
+  const today = new Date();
+  return today.getDate();
+}
+
+// Function to enable the days up to the current day
+function enableCurrentDays() {
+  const currentDay = getCurrentDay();
+  for (let i = 1; i <= currentDay; i++) {
+    const dayElement = document.querySelector(`[data-bs-target="#day${i}"]`);
+    if (dayElement) {
+      dayElement.classList.remove('disabled');
+    }
+  }
+}
+
 // Function to initialize the calendar by loading days and modals
 async function initialize() {
   await loadDays();
+  enableCurrentDays();
   await loadModals();
 }
 
