@@ -6,16 +6,34 @@ async function loadDays() {
   if (calendarDaysElement) {
     calendarDaysElement.innerHTML = data;
 
-    // Make days 18 to 23 not clickable
-    for (let i = 19; i <= 23; i++) {
-      const dayElement = document.querySelector(`[data-bs-target="#day${i}"]`);
-      if (dayElement) {
+    // Select all day elements
+    const dayElements = document.querySelectorAll('.calendar-day');
+    
+    dayElements.forEach((dayElement, index) => {
+      const dayNumber = index + 1; // Adjust index to start from 1
+      
+      // Make days 19 to 23 unclickable
+      if (dayNumber >= 19 && dayNumber <= 23) {
         dayElement.removeAttribute('data-bs-toggle'); // Remove modal toggle attribute
         dayElement.removeAttribute('data-bs-target'); // Remove modal target attribute
         dayElement.style.cursor = 'not-allowed'; // Change cursor to indicate it's not clickable
         dayElement.classList.add('disabled'); // Optionally add a class for further styling
       }
-    }
+
+      // Set tooltip messages dynamically
+      const tooltipMessage = dayNumber >= 19 && dayNumber <= 23 
+        ? "This day is not clickable" 
+        : `Day ${dayNumber}`;
+      dayElement.setAttribute('data-bs-toggle', 'tooltip');
+      dayElement.setAttribute('data-bs-placement', 'top');
+      dayElement.setAttribute('title', tooltipMessage);
+    });
+
+    // Enable Bootstrap tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+      new bootstrap.Tooltip(tooltipTriggerEl);
+    });
   }
 }
 
@@ -46,4 +64,3 @@ async function initialize() {
 }
 
 initialize();
-
