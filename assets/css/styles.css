@@ -178,6 +178,40 @@ h1.gif-background {
   opacity: 1;
 }
 
+/* Mute Button Styles */
+.mute-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff; /* White background */
+  color: #dc3545; /* Bootstrap danger red */
+  border: 2px solid #dc3545; /* Red border */
+  border-radius: 30px; /* Rounded button */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it stays on top */
+  transition: all 0.3s ease-in-out;
+}
+
+.mute-btn:hover {
+  background-color: #dc3545; /* Red background on hover */
+  color: #fff; /* White text on hover */
+}
+
+.mute-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Optional: Add a subtle click effect */
+.mute-btn:active {
+  transform: scale(0.95); /* Slightly smaller when clicked */
+}
+
 /* Highlight Current Day */
 .highlight-current-day {
   animation: highlight 0.5s ease-in-out infinite alternate;
