@@ -9,6 +9,32 @@
   background-color: #000;
 }
 
+*::-webkit-scrollbar {
+  width: 1rem !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #dc3545;
+  box-shadow:
+    inset 0 0 5px rgba(0, 0, 0, 0.3),
+    0 0 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  border-left: 2px solid #ff9900;
+  border-right: 2px solid #ff9900;
+  box-shadow:
+    inset 0 0 5px rgba(0, 0, 0, 0.4),
+    0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+*::-webkit-scrollbar-track {
+  background: #000;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 body {
   font-family: 'Vesper Libre', serif !important;
 }
@@ -33,17 +59,145 @@ h1 {
   --bs-border-width: 0 !important;
 }
 
+/* Glowing border effect for cards */
+.card:before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    #ff6f61cc,
+    #ff9f40cc,
+    #ffdf00cc,
+    #40ff9fcc,
+    #61ff6fcc,
+    #9f40ffcc,
+    #df00ffcc,
+    #ff40dfcc,
+    #ff6f61cc
+  );
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  background-size: 800%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  transition: all 1.5s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+/* Apply animation on hover */
+.card:hover:before {
+  animation: glowing-card-animation 10s linear infinite;
+  opacity: 1; /* Show on hover */
+}
+
+/* Glowing animation for the cards */
+@keyframes glowing-card-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 800% 0;
+  }
+}
+
+/* Inner shadow effect */
+.card:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
 /* The element that will rotate */
 .flip-inner {
   height: 13rem;
   position: relative;
   transition: transform 0.8s ease;
   transform-style: preserve-3d;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-/* Flip on hover */
+/* Glowing border effect for flip-inner */
+.flip-inner:before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    #ff6e618c,
+    #ffa040ad,
+    #ffdd00a1,
+    #40ffa0ab,
+    #61ff6ea2,
+    #a040ff9f,
+    #dd00ffa8,
+    #ff40df9c,
+    #ff6e61ad
+  );
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  background-size: 800%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  transition: all 1.5s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+/* Apply animation on hover */
+.card:hover .flip-inner:before {
+  animation: glowing-card-animation 10s linear infinite;
+  opacity: 1; /* Show on hover */
+}
+
+/* Glowing animation for the flip-inner */
+@keyframes glowing-card-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 800% 0;
+  }
+}
+
+/* Inner shadow effect */
+.flip-inner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/* Flip on hover with moving border effect */
 .card:hover .flip-inner {
   transform: rotateY(180deg);
+  animation: moving-border 1s linear infinite;
+}
+
+/* Flip on click with 720-degree rotation effect */
+.card:active .flip-inner {
+  transform: rotateY(900deg);
+  transition: transform 2s ease;
 }
 
 /* Front and back faces */
@@ -76,6 +230,19 @@ h1 {
   display: block;
   padding: 10px;
   object-fit: contain;
+}
+
+/* Keyframes for moving border effect */
+@keyframes moving-border {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* Modal Content Styling */
@@ -240,5 +407,12 @@ h1 {
 
   .modal-body {
     padding: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .flip-front img,
+  .flip-back img {
+    padding: 0 !important;
   }
 }
