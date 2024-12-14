@@ -77,6 +77,7 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [Greaves Travel India](https://www.greavesindia.co.uk/these-are-the-most-beautiful-sights-in-bhutan/) - Image for Bhutan Day
 - [Wikipedia: Flag of Bhutan](https://en.wikipedia.org/wiki/Flag_of_Bhutan#/media/File:Flag_of_Bhutan.svg) - Image for Bhutan Flag
 - [ThoughtCo & National Archive and Records Administration](https://www.thoughtco.com/germans-to-america-1421984) - Image of German Migrants for Migrant Day
+- [Emojipedia](https://emojipedia.org/) - Assets for reverse of cards
 
 ### Libraries, Tools and Frameworks
 
