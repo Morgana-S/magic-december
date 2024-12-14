@@ -58,6 +58,13 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - As a frequent visitor, I want the site to have new content available to me each day.
 - As a frequent visitor, I want to be able to find out more information on each festival after reading the site's content.
 
+## Testing & Bugs
+
+### Bugs
+- Tooltip does not show 'This day is not clickable' on inactive days. 
+    - Cause: This is caused by the 'disabled' class having a 'pointer-events: none' property, which causes the tooltip not to fire.
+    - Fix: Remove the 'pointer events: none' property from the 'disabled' class. The 'cursor: not-allowed' property can remain to indicate to the user that the button is not clickable.
+
 ## Credits
 
 ### Content
@@ -70,6 +77,7 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [Greaves Travel India](https://www.greavesindia.co.uk/these-are-the-most-beautiful-sights-in-bhutan/) - Image for Bhutan Day
 - [Wikipedia: Flag of Bhutan](https://en.wikipedia.org/wiki/Flag_of_Bhutan#/media/File:Flag_of_Bhutan.svg) - Image for Bhutan Flag
 - [ThoughtCo & National Archive and Records Administration](https://www.thoughtco.com/germans-to-america-1421984) - Image of German Migrants for Migrant Day
+- [Emojipedia](https://emojipedia.org/) - Assets for reverse of cards
 
 ### Libraries, Tools and Frameworks
 
