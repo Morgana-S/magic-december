@@ -58,6 +58,15 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - As a frequent visitor, I want the site to have new content available to me each day.
 - As a frequent visitor, I want to be able to find out more information on each festival after reading the site's content.
 
+## Notable Challenges
+### Functionality
+Discussions were held at regular intervals about the scope and functionality of the site. We decided early on to expand the scope of the project from the traditional 25 day advent calendar to a full month of holiday celebrations. However, we noted that some days of the month of December do not have any notable holidays. We discussed addressing this issue in two ways:
+
+- Having notable festivals from other times of the year, such as Diwali, Hannukah, and Eid, stand in for those days. 
+- Filling the days without notable holidays with GIF content relevant to the season.
+
+We ultimately decided to go for the GIF content as we felt that this helped to 'break-up' the format of the content on the other cards.
+
 ## Testing & Bugs
 
 ### Bugs
@@ -78,6 +87,7 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 - [Wikipedia: Flag of Bhutan](https://en.wikipedia.org/wiki/Flag_of_Bhutan#/media/File:Flag_of_Bhutan.svg) - Image for Bhutan Flag
 - [ThoughtCo & National Archive and Records Administration](https://www.thoughtco.com/germans-to-america-1421984) - Image of German Migrants for Migrant Day
 - [Emojipedia](https://emojipedia.org/) - Assets for reverse of cards
+- [Giphy](https://giphy.com/) - GIFs for cards without holidays
 
 ### Libraries, Tools and Frameworks
 
