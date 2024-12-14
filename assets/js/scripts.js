@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   await initialize();
 });
 
-
 // Function to load the days content into the calendar
 async function loadDays() {
   const response = await fetch('partials/days.html');
@@ -40,7 +39,7 @@ async function loadDays() {
     dayElements.forEach((dayElement, index) => {
       const dayNumber = index + 1; // Adjust index to start from 1
 
-      if ([19, 22, 27, 29].includes(dayNumber)) {
+      if ([19, 22, 27, 29, 30].includes(dayNumber)) {
         // Make days 19 to 23 unclickable
         dayElement.removeAttribute('data-bs-toggle'); // Remove modal toggle attribute
         dayElement.removeAttribute('data-bs-target'); // Remove modal target attribute
@@ -55,11 +54,12 @@ async function loadDays() {
 
         // Add click event to play the bell sound
         dayElement.addEventListener('click', () => {
-          if (!isMuted) { // Play the sound only if not muted
+          if (!isMuted) {
+            // Play the sound only if not muted
             bellSound.currentTime = 0; // Reset sound to the beginning
             bellSound.play(); // Play the bell sound
           }
-        });        
+        });
       }
 
       // Tooltip logic
@@ -71,14 +71,14 @@ async function loadDays() {
           'title',
           [19, 22, 27, 29].includes(dayNumber)
             ? 'This day is not clickable'
-            : `Day ${dayNumber}`
+            : `Day ${dayNumber}`,
         );
       }
     });
 
     // Enable Bootstrap tooltips
     const tooltipTriggerList = [].slice.call(
-      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      document.querySelectorAll('[data-bs-toggle="tooltip"]'),
     );
     tooltipTriggerList.forEach(function (tooltipTriggerEl) {
       new bootstrap.Tooltip(tooltipTriggerEl);
@@ -117,7 +117,7 @@ async function loadModals() {
   }
 
   // Load modal contents for each day
-  for (let i = 1; i <= 25; i++) {
+  for (let i = 1; i <= 31; i++) {
     const dayResponse = await fetch(`partials/day-content/day${i}.html`);
     const content = await dayResponse.text();
     const dayContentElement = document.getElementById(`day${i}Content`);
