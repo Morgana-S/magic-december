@@ -19,22 +19,11 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-h1.gif-background {
-  position: relative;
-  font-size: 4rem; /* Increase the text size */
-  color: rgb(251, 245, 235); /* Ensure text is readable */
-  font-weight: bold;
-  text-align: center;
-  padding: 40px 20px; /* Add more padding for better spacing */
-  height: 300px; /* Increase height to display more of the cover image */
-  background-image: url('../images/coverimage.webp'); /* Ensure path to the cover image is correct */
-  background-size: cover; /* Make the image cover the entire background */
-  background-repeat: no-repeat; /* Prevent repeating */
-  background-position: center; /* Center the image */
-  display: flex; /* Center the content vertically and horizontally */
-  justify-content: center;
-  align-items: center;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Enhance text readability with a stronger shadow */
+.gif-background {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .card {
