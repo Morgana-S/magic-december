@@ -57,12 +57,6 @@ h1 {
   perspective: 1000px; /* Enables 3D space for the rotation */
   padding: 0 !important;
   --bs-border-width: 0 !important;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 /* Glowing border effect for cards */
@@ -129,6 +123,69 @@ h1 {
   position: relative;
   transition: transform 0.8s ease;
   transform-style: preserve-3d;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* Glowing border effect for flip-inner */
+.flip-inner:before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    #ff6e618c,
+    #ffa040ad,
+    #ffdd00a1,
+    #40ffa0ab,
+    #61ff6ea2,
+    #a040ff9f,
+    #dd00ffa8,
+    #ff40df9c,
+    #ff6e61ad
+  );
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  background-size: 800%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  transition: all 1.5s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+/* Apply animation on hover */
+.card:hover .flip-inner:before {
+  animation: glowing-card-animation 10s linear infinite;
+  opacity: 1; /* Show on hover */
+}
+
+/* Glowing animation for the flip-inner */
+@keyframes glowing-card-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 800% 0;
+  }
+}
+
+/* Inner shadow effect */
+.flip-inner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  z-index: -1;
 }
 
 /* Flip on hover with moving border effect */
