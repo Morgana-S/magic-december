@@ -2,6 +2,8 @@
 <!-- Add image of responsive design showcase here -->
 ## Deployment
 The project is deployed and can be accessed at: https://morgana-s.github.io/magic-december/
+## Issues Tracker
+Our issues tracker can be accessed here: https://github.com/users/Morgana-S/projects/1
 ## Criteria
 ### The project fits the theme of celebrating the holidays.
 - Our project is focused on not only celebrating Christmas, but the variety of holidays and festivals that are celebrated around the world. With each day on the calendar, we have tried to provide a relevant celebration that occurs on that day; however, we have also chosen several major celebrations that occur at different times of the year. While Christmas is the main holiday that people are thinking about right now, there's no reason not to maintain that festive spirit throughout the year. 
