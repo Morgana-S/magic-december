@@ -40,7 +40,7 @@ async function loadDays() {
     dayElements.forEach((dayElement, index) => {
       const dayNumber = index + 1; // Adjust index to start from 1
 
-      if (dayNumber >= 19 && dayNumber <= 23) {
+      if ([19, 22, 27, 29].includes(dayNumber)) {
         // Make days 19 to 23 unclickable
         dayElement.removeAttribute('data-bs-toggle'); // Remove modal toggle attribute
         dayElement.removeAttribute('data-bs-target'); // Remove modal target attribute
@@ -69,7 +69,7 @@ async function loadDays() {
         tooltipWrapper.setAttribute('data-bs-placement', 'top');
         tooltipWrapper.setAttribute(
           'title',
-          dayNumber >= 19 && dayNumber <= 23
+          [19, 22, 27, 29].includes(dayNumber)
             ? 'This day is not clickable'
             : `Day ${dayNumber}`
         );
