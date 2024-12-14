@@ -69,7 +69,7 @@ async function loadDays() {
         tooltipWrapper.setAttribute('data-bs-placement', 'top');
         tooltipWrapper.setAttribute(
           'title',
-          dayNumber >= 19 && dayNumber <= 23
+          [19, 22, 27, 29].includes(dayNumber)
             ? 'This day is not clickable'
             : `Day ${dayNumber}`
         );
