@@ -268,3 +268,10 @@ h1 {
     padding: 15px;
   }
 }
+
+@media (max-width: 350px) {
+  .flip-front img,
+  .flip-back img {
+    padding: 0 !important;
+  }
+}
