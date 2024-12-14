@@ -194,6 +194,12 @@ h1 {
   animation: moving-border 1s linear infinite;
 }
 
+/* Flip on click with 720-degree rotation effect */
+.card:active .flip-inner {
+  transform: rotateY(900deg);
+  transition: transform 2s ease;
+}
+
 /* Front and back faces */
 .flip-front,
 .flip-back {
