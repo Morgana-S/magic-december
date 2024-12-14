@@ -9,6 +9,32 @@
   background-color: #000;
 }
 
+*::-webkit-scrollbar {
+  width: 1rem !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #dc3545;
+  box-shadow:
+    inset 0 0 5px rgba(0, 0, 0, 0.3),
+    0 0 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  border-left: 2px solid #ff9900;
+  border-right: 2px solid #ff9900;
+  box-shadow:
+    inset 0 0 5px rgba(0, 0, 0, 0.4),
+    0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+*::-webkit-scrollbar-track {
+  background: #000;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 body {
   font-family: 'Vesper Libre', serif !important;
 }
