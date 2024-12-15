@@ -140,6 +140,34 @@ async function loadModals() {
   }
 }
 
+function manageTooltipsOnResize() {
+  const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+
+  const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+  tooltips.forEach((tooltipEl) => {
+    const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipEl);
+
+    if (isSmallScreen) {
+      // Destroy tooltips on small screens
+      if (tooltipInstance) {
+        tooltipInstance.dispose();
+      }
+    } else {
+      // Re-enable tooltips on larger screens
+      if (!tooltipInstance) {
+        new bootstrap.Tooltip(tooltipEl);
+      }
+    }
+  });
+}
+
+// Run on load and resize
+document.addEventListener('DOMContentLoaded', manageTooltipsOnResize);
+window.addEventListener('resize', manageTooltipsOnResize);
+
+
+
 // Function to initialize the calendar by loading days and modals
 async function initialize() {
   await loadDays();
