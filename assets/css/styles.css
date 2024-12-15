@@ -41,11 +41,22 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .gif-background {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 /* custom button */
@@ -417,40 +428,6 @@ h1 {
 .modal.fade.show .modal-dialog {
   transform: translateY(0);
   opacity: 1;
-}
-
-/* Mute Button Styles */
-.mute-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #fff; /* White background */
-  color: #dc3545; /* Bootstrap danger red */
-  border: 2px solid #dc3545; /* Red border */
-  border-radius: 30px; /* Rounded button */
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  z-index: 1000; /* Ensure it stays on top */
-  transition: all 0.3s ease-in-out;
-}
-
-.mute-btn:hover {
-  background-color: #dc3545; /* Red background on hover */
-  color: #fff; /* White text on hover */
-}
-
-.mute-icon {
-  margin-right: 8px;
-  font-size: 18px;
-}
-
-/* Optional: Add a subtle click effect */
-.mute-btn:active {
-  transform: scale(0.95); /* Slightly smaller when clicked */
 }
 
 /* Highlight Current Day */
