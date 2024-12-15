@@ -20,8 +20,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Initialize the calendar
   await initialize();
+
+  // Load instructions modal
+  await loadInstructionsModal();
 });
 
+// Function to load the instructions modal content
+async function loadInstructionsModal() {
+  const response = await fetch('partials/instructions.html');
+  const data = await response.text();
+  const instructionsModalContainer = document.getElementById(
+    'instructions-modal-container',
+  );
+  if (instructionsModalContainer) {
+    instructionsModalContainer.innerHTML = data;
+  }
+}
 
 // Function to load the days content into the calendar
 async function loadDays() {
@@ -55,11 +69,12 @@ async function loadDays() {
 
         // Add click event to play the bell sound
         dayElement.addEventListener('click', () => {
-          if (!isMuted) { // Play the sound only if not muted
+          if (!isMuted) {
+            // Play the sound only if not muted
             bellSound.currentTime = 0; // Reset sound to the beginning
             bellSound.play(); // Play the bell sound
           }
-        });        
+        });
       }
 
       // Tooltip logic
@@ -67,14 +82,13 @@ async function loadDays() {
       if (tooltipWrapper) {
         tooltipWrapper.setAttribute('data-bs-toggle', 'tooltip');
         tooltipWrapper.setAttribute('data-bs-placement', 'top');
-        tooltipWrapper.setAttribute(
-          'title', `Day ${dayNumber}`);
+        tooltipWrapper.setAttribute('title', `Day ${dayNumber}`);
       }
     });
 
     // Enable Bootstrap tooltips
     const tooltipTriggerList = [].slice.call(
-      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      document.querySelectorAll('[data-bs-toggle="tooltip"]'),
     );
     tooltipTriggerList.forEach(function (tooltipTriggerEl) {
       new bootstrap.Tooltip(tooltipTriggerEl);
