@@ -7,7 +7,9 @@ function toggleMute() {
 
   const muteButton = document.getElementById('mute-button');
   if (muteButton) {
-    muteButton.innerHTML = isMuted ? '<i class="fa-solid fa-volume-xmark"></i>' : '<i class="fa-solid fa-volume-high"></i>';
+    muteButton.innerHTML = isMuted
+      ? '<i class="fa-solid fa-volume-xmark fa-lg"></i>'
+      : '<i class="fa-solid fa-volume-high fa-lg"></i>';
   }
 }
 
@@ -54,7 +56,7 @@ async function loadDays() {
     dayElements.forEach((dayElement, index) => {
       const dayNumber = index + 1; // Adjust index to start from 1
 
-      if (!(dayNumber)) {
+      if (!dayNumber) {
         // Make days 19 to 23 unclickable
         dayElement.removeAttribute('data-bs-toggle'); // Remove modal toggle attribute
         dayElement.removeAttribute('data-bs-target'); // Remove modal target attribute

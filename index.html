@@ -38,28 +38,39 @@
     </video>
     <div class="container">
       <img src="assets/images/logo.webp" class="gif-background my-2" />
-      <div class="controls-container">
+      <div
+        class="controls-container my-lg-3 my-4 d-flex justify-content-between"
+      >
         <!-- Button trigger modal -->
         <button
-        type="button"
-        class="btn btn-custom mb-4"
-        data-bs-toggle="modal"
-        data-bs-target="#instructionsModal"
+          type="button"
+          class="btn btn-custom d-flex align-items-center justify-content-center py-3"
+          data-bs-toggle="modal"
+          data-bs-target="#instructionsModal"
         >
-        <i class="fa-solid fa-question fa-lg"></i>
+          <i class="fa-solid fa-question fa-lg"></i>
         </button>
-        <button id="mute-button" class="btn btn-custom mb-4">
-          <i class="fa-solid fa-volume-high"></i>
+        <!-- Mute button -->
+        <button
+          id="mute-button"
+          class="btn btn-custom d-flex align-items-center justify-content-center py-3"
+        >
+          <i class="fa-solid fa-volume-high fa-lg"></i>
         </button>
-        <a href="https://github.com/Morgana-S/magic-december" target="_blank" aria-label="Click here to go to the GitHub Repo for this project (opens in a new tab)">
-          <button id="github-logo" class="btn btn-custom mb-4">
-              <i class="fa-brands fa-github"></i>
-          </button>
+        <!-- GitHub button -->
+        <a
+          id="github-logo"
+          href="https://github.com/Morgana-S/magic-december"
+          target="_blank"
+          class="btn btn-custom d-flex align-items-center justify-content-center py-3"
+          aria-label="Click here to go to the GitHub Repo for this project (opens in a new tab)"
+        >
+          <i class="fa-brands fa-github fa-lg"></i>
         </a>
-        </div>
+      </div>
       <!-- Include instructions modal -->
       <div id="instructions-modal-container"></div>
-      
+
       <div id="calendar-days">
         <!-- Days will be loaded here -->
       </div>
