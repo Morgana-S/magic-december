@@ -3,8 +3,6 @@ let isMuted = false;
 // Function to toggle mute state
 function toggleMute() {
   isMuted = !isMuted;
-  console.log(`Mute toggled: ${isMuted}`); // Debugging log
-
   const muteButton = document.getElementById('mute-button');
   if (muteButton) {
     muteButton.innerHTML = isMuted
@@ -81,8 +79,7 @@ async function loadDays() {
 
       // Tooltip logic
       const tooltipWrapper = dayElement.querySelector('.tooltip-wrapper');
-      const isMobile = window.matchMedia('(max-width: 768px)');
-      if (tooltipWrapper && !isMobile.matches) {
+      if (tooltipWrapper) {
         tooltipWrapper.setAttribute('data-bs-toggle', 'tooltip');
         tooltipWrapper.setAttribute('data-bs-placement', 'top');
         tooltipWrapper.setAttribute('title', `Day ${dayNumber}`);
