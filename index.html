@@ -10,6 +10,13 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!--Add Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +26,8 @@
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="./assets/css/custom-cursor.css" /> <!-- Add this line -->
+    <link rel="stylesheet" href="./assets/css/custom-cursor.css" />
+    <!-- Add this line -->
   </head>
 
   <body>
@@ -33,6 +41,19 @@
         <span class="mute-icon">&#128264;</span> Mute
       </button>
       <img src="assets/images/logo.webp" class="gif-background my-2" />
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-custom mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#instructionsModal"
+      >
+        <i class="fa-solid fa-question fa-lg"></i>
+      </button>
+
+      <!-- Include instructions modal -->
+      <div id="instructions-modal-container"></div>
+      
       <div id="calendar-days">
         <!-- Days will be loaded here -->
       </div>
