@@ -40,7 +40,7 @@ async function loadDays() {
     dayElements.forEach((dayElement, index) => {
       const dayNumber = index + 1; // Adjust index to start from 1
 
-      if ([27, 29].includes(dayNumber)) {
+      if (!(dayNumber)) {
         // Make days 19 to 23 unclickable
         dayElement.removeAttribute('data-bs-toggle'); // Remove modal toggle attribute
         dayElement.removeAttribute('data-bs-target'); // Remove modal target attribute
@@ -68,11 +68,7 @@ async function loadDays() {
         tooltipWrapper.setAttribute('data-bs-toggle', 'tooltip');
         tooltipWrapper.setAttribute('data-bs-placement', 'top');
         tooltipWrapper.setAttribute(
-          'title',
-          [27, 29].includes(dayNumber)
-            ? 'This day is not clickable'
-            : `Day ${dayNumber}`
-        );
+          'title', `Day ${dayNumber}`);
       }
     });
 
@@ -117,7 +113,7 @@ async function loadModals() {
   }
 
   // Load modal contents for each day
-  for (let i = 1; i <= 25; i++) {
+  for (let i = 1; i <= 31; i++) {
     const dayResponse = await fetch(`partials/day-content/day${i}.html`);
     const content = await dayResponse.text();
     const dayContentElement = document.getElementById(`day${i}Content`);
