@@ -506,6 +506,11 @@ a {
   font-size: 18px;
 }
 
+.card-31 {
+  margin: 0 auto;
+  width: 59%;
+}
+
 /* Optional: Add a subtle click effect */
 .mute-btn:active {
   transform: scale(0.95);
@@ -538,6 +543,9 @@ a {
 
   .modal-body {
     padding: 15px;
+  }
+  .card-31 {
+    width: 100%;
   }
 }
 
