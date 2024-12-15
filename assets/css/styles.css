@@ -48,6 +48,74 @@ h1 {
   margin: 0 auto;
 }
 
+/* custom button */
+.btn-custom {
+  padding: 0.4em 1.6em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #dc3545;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-custom:before {
+  content: '';
+  background: linear-gradient(
+    90deg,
+    #ff6f61cc,
+    #ff9f40cc,
+    #ffdf00cc,
+    #40ff9fcc,
+    #61ff6fcc,
+    #9f40ffcc,
+    #df00ffcc,
+    #ff40dfcc,
+    #ff6f61cc
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-btn-custom 20s linear infinite;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-btn-custom {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn-custom:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #dc3545;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
 .card {
   background-color: transparent !important;
   perspective: 1000px; /* Enables 3D space for the rotation */
