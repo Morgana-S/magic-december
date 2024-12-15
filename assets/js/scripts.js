@@ -20,7 +20,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Initialize the calendar
   await initialize();
+
+  // Load instructions modal
+  await loadInstructionsModal();
 });
+
+// Function to load the instructions modal content
+async function loadInstructionsModal() {
+  const response = await fetch('partials/instructions.html');
+  const data = await response.text();
+  const instructionsModalContainer = document.getElementById(
+    'instructions-modal-container',
+  );
+  if (instructionsModalContainer) {
+    instructionsModalContainer.innerHTML = data;
+  }
+}
 
 // Function to load the days content into the calendar
 async function loadDays() {
