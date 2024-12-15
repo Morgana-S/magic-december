@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .background-video {
   position: fixed;
   top: 0;
@@ -32,7 +34,7 @@
 }
 
 body {
-  font-family: 'Vesper Libre', serif !important;
+  font-family: 'Vesper Libre', serif;
 }
 
 h1 {
@@ -346,10 +348,6 @@ a {
   background-blend-mode: overlay;
 }
 
-#not_a_holiday {
-  background-color: #ff6f61;
-}
-
 .modal-header .modal-title {
   font-size: 1.8rem !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -371,6 +369,18 @@ a {
   color: #000;
 }
 
+.read_more {
+  background-color: transparent;
+  color: #ff6f61;
+  border-color: #ff6f61;
+}
+
+.read_more:hover {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+
+}
+
 /* Modal Body Styling */
 .modal-body {
   padding: 20px;
@@ -378,6 +388,8 @@ a {
   color: #333;
   line-height: 1.6;
   background-color: #fff;
+  font-family: "Merriweather", serif;
+  ;
 }
 
 .modal-body h5 {
@@ -404,7 +416,7 @@ a {
 .modal-body img {
   display: block;
   margin: 0 auto;
-  width: 95%
+  width: 95%;
 }
 
 /* Card Description */
@@ -417,14 +429,33 @@ a {
   border-radius: 5px;
 }
 
-/* Buttons and Close Icon */
-.btn-close {
-  opacity: 0.7;
+.btn-close-custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
+  background-color: #00000080;
+  border-radius: 0 0 0 50rem !important;
+  height: 48px !important;
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  z-index: 10;
 }
 
-.btn-close:hover {
+.btn-close-custom:hover {
   opacity: 1;
+  color: #ff6f61;
 }
 
 /* Animations */
