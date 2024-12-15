@@ -81,7 +81,8 @@ async function loadDays() {
 
       // Tooltip logic
       const tooltipWrapper = dayElement.querySelector('.tooltip-wrapper');
-      if (tooltipWrapper) {
+      const isMobile = window.matchMedia('(max-width: 768px)');
+      if (tooltipWrapper && !isMobile.matches) {
         tooltipWrapper.setAttribute('data-bs-toggle', 'tooltip');
         tooltipWrapper.setAttribute('data-bs-placement', 'top');
         tooltipWrapper.setAttribute('title', `Day ${dayNumber}`);
