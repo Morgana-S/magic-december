@@ -37,20 +37,26 @@
       Your browser does not support the video tag.
     </video>
     <div class="container">
-      <button id="mute-button" class="mute-btn">
-        <span class="mute-icon">&#128264;</span> Mute
-      </button>
       <img src="assets/images/logo.webp" class="gif-background my-2" />
-      <!-- Button trigger modal -->
-      <button
+      <div class="controls-container">
+        <!-- Button trigger modal -->
+        <button
         type="button"
         class="btn btn-custom mb-4"
         data-bs-toggle="modal"
         data-bs-target="#instructionsModal"
-      >
+        >
         <i class="fa-solid fa-question fa-lg"></i>
-      </button>
-
+        </button>
+        <button id="mute-button" class="btn btn-custom mb-4">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <a href="https://github.com/Morgana-S/magic-december" target="_blank" aria-label="Click here to go to the GitHub Repo for this project (opens in a new tab)">
+          <button id="github-logo" class="btn btn-custom mb-4">
+              <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+        </div>
       <!-- Include instructions modal -->
       <div id="instructions-modal-container"></div>
       
