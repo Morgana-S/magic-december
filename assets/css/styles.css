@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .background-video {
   position: fixed;
   top: 0;
@@ -32,7 +34,7 @@
 }
 
 body {
-  font-family: 'Vesper Libre', serif !important;
+  font-family: 'Vesper Libre', serif;
 }
 
 h1 {
@@ -78,18 +80,16 @@ a {
 
 .btn-custom:before {
   content: '';
-  background: linear-gradient(
-    90deg,
-    #ff6f61cc,
-    #ff9f40cc,
-    #ffdf00cc,
-    #40ff9fcc,
-    #61ff6fcc,
-    #9f40ffcc,
-    #df00ffcc,
-    #ff40dfcc,
-    #ff6f61cc
-  );
+  background: linear-gradient(90deg,
+      #ff6f61cc,
+      #ff9f40cc,
+      #ffdf00cc,
+      #40ff9fcc,
+      #61ff6fcc,
+      #9f40ffcc,
+      #df00ffcc,
+      #ff40dfcc,
+      #ff6f61cc);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -141,18 +141,16 @@ a {
 /* Glowing border effect for cards */
 .card:before {
   content: '';
-  background: linear-gradient(
-    90deg,
-    #ff6f61cc,
-    #ff9f40cc,
-    #ffdf00cc,
-    #40ff9fcc,
-    #61ff6fcc,
-    #9f40ffcc,
-    #df00ffcc,
-    #ff40dfcc,
-    #ff6f61cc
-  );
+  background: linear-gradient(90deg,
+      #ff6f61cc,
+      #ff9f40cc,
+      #ffdf00cc,
+      #40ff9fcc,
+      #61ff6fcc,
+      #9f40ffcc,
+      #df00ffcc,
+      #ff40dfcc,
+      #ff6f61cc);
   position: absolute;
   top: -3px;
   left: -3px;
@@ -214,18 +212,16 @@ a {
 /* Glowing border effect for flip-inner */
 .flip-inner:before {
   content: '';
-  background: linear-gradient(
-    90deg,
-    #ff6e618c,
-    #ffa040ad,
-    #ffdd00a1,
-    #40ffa0ab,
-    #61ff6ea2,
-    #a040ff9f,
-    #dd00ffa8,
-    #ff40df9c,
-    #ff6e61ad
-  );
+  background: linear-gradient(90deg,
+      #ff6e618c,
+      #ffa040ad,
+      #ffdd00a1,
+      #40ffa0ab,
+      #61ff6ea2,
+      #a040ff9f,
+      #dd00ffa8,
+      #ff40df9c,
+      #ff6e61ad);
   position: absolute;
   top: -3px;
   left: -3px;
@@ -352,10 +348,6 @@ a {
   background-blend-mode: overlay;
 }
 
-#not_a_holiday {
-  background-color: #ff6f61;
-}
-
 .modal-header .modal-title {
   font-size: 1.8rem !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -377,6 +369,18 @@ a {
   color: #000;
 }
 
+.read_more {
+  background-color: transparent;
+  color: #ff6f61;
+  border-color: #ff6f61;
+}
+
+.read_more:hover {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+
+}
+
 /* Modal Body Styling */
 .modal-body {
   padding: 20px;
@@ -384,6 +388,8 @@ a {
   color: #333;
   line-height: 1.6;
   background-color: #fff;
+  font-family: "Merriweather", serif;
+  ;
 }
 
 .modal-body h5 {
@@ -536,6 +542,7 @@ a {
 }
 
 @media (max-width: 350px) {
+
   .flip-front img,
   .flip-back img {
     padding: 0 !important;
