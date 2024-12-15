@@ -2,8 +2,10 @@
 ![Responsive Design Showcase](/documentation/feature-images/responsive-design-showcase.png)
 ## Deployment
 The project is deployed and can be accessed at: https://morgana-s.github.io/magic-december/
+
 ## Issues Tracker / KanBan Board
 Our issues tracker can be accessed here: https://github.com/users/Morgana-S/projects/1
+
 ## Criteria
 ### The project fits the theme of celebrating the holidays.
 - Our project is focused on not only celebrating Christmas, but the variety of holidays and festivals that are celebrated around the world. With each day on the calendar, we have tried to provide a relevant celebration that occurs on that day; however, we have also chosen several major celebrations that occur at different times of the year. While Christmas is the main holiday that people are thinking about right now, there's no reason not to maintain that festive spirit throughout the year. 
@@ -50,6 +52,7 @@ The website was designed as a celebration of festivals and holidays around the w
 These colours evoke imagery of the holiday season (particularly of Santa Claus and elves) and are designed to remind the user of the purpose of the site.
 
 While the wireframes themselves were rudimentary, regular discussion was had between the team members on the appearance of the site via Slack; the overall appearance of the website was a collaborative effort with the wireframes being designed by Morgana and Anna contributing assets for the design of the cards using Canva and Adobe Firefly.
+
 ## User Stories
 **First Time Visitors:**
 - As a first time visitor, I want to be able to clearly understand the purpose of the site.
@@ -58,7 +61,7 @@ While the wireframes themselves were rudimentary, regular discussion was had bet
 
 **Frequent Visitors:**
 - As a frequent visitor, I want the site to have new content available to me each day.
-- As a frequent visitor, I want to be able to find out more information on each festival after reading the site's content.
+- As a frequent visitor, I want to be able to find out more information on each festival after reading a short description of the individual day's content.
 
 ## Features
 ### Animated Background
@@ -73,7 +76,7 @@ A custom cursor was implemented that fit the 'magic' theme of the site. We also 
 ![Custom Scrollbar](/documentation/feature-images/scrollbar.png)
 
 ### User Controls
-User controls were added to allow the user to read instructions on how to use the site, mute the sound effect if desired, and visit the GitHub repo.
+User controls were added to allow the user to read instructions on how to use the site, mute the sound effect if desired, set the card style to light or dark mode, and visit the GitHub repo.
 
 ![User Controls](/documentation/feature-images/user-controls.gif)
 ### Card Animations
@@ -101,18 +104,58 @@ The site highlights the current day of the month for December - for example, the
 Discussions were held at regular intervals about the scope and functionality of the site. We decided early on to expand the scope of the project from the traditional 25 day advent calendar to a full month of holiday celebrations. However, we noted that some days of the month of December do not have any notable holidays. We discussed addressing this issue in two ways:
 
 - Having notable festivals from other times of the year, such as Diwali, Hannukah, and Eid, stand in for those days. 
-- Filling the days without notable holidays with GIF content relevant to the season.
+- Using GIFs and short-form paragraphs to fill the days without holidays.
 
 We ultimately decided to go for the GIF content as we felt that this helped to 'break-up' the format of the content on the other cards.
 
+### Design
+In our team huddles, there were often changes from the original wireframes and even changes to the project name; this demonstrates that we could have had a more sizeable planning period that would allow us to have worked the finer details out in advance. Implementing a better planning phase would likely have saved time in both documenting and implementing changes.
+
+### Performance
+
+As indicated in the lighthouse report below, we believe the performance of the site can be improved significantly. An effort was made to improve the performance of the site via the conversion of PNG files to WEBP format and resizing overly-large image assets, but significant headway can still be made through more efficient importing of assets such as Google Fonts, the Bootstrap Framework templates, and Font Awesome icons.
+
 ## Testing & Bugs
+
+### Manual Testing
+Below is a systematic list of tests carried out while testing the website's features.
+
+| Feature | Test Method | Expected Result | Actual Result |
+| --- | --- | --- | --- |
+| Animated Background | Test that the animated background displays correctly on desktop, mobile, and multiple browsers. | Animated background displays correctly across all tested platforms. | Working as intended. |
+| Custom Cursor | Test that the cursor displays correctly on desktop websites. | Cursor displays correctly on all tested browsers. | Working as intended. |
+| Custom Scrollbar | Test that the scrollbar displays correctly on all desktop browsers. | Scrollbar shows up correctly on all tested browsers. | Scrollbar did not change colour on Mozilla Firefox Browser. |
+| User Controls | Test each user control on mobile and desktop to confirm feature works correctly (i.e. dark mode correctly sets the modal display to dark) | All user control features perform the desired functions on both desktop and mobile platforms. | Working as intended. |
+| Card Animations | Test both short card animations (short click) and long card animations (hold down click) on both desktop and mobile platforms. | Short click should animate the card briefly, long click should animate the card for an extended length of time. | Short click functionality on both desktop and mobile devices working as intended - due to most mobile functionality interpreting a long press as trying to open or control an image (i.e open the image in a new tab) the long press functionality does not occur. |
+| Modal-Based Design | Modals for each card are opened on mobile and desktop browsers and platforms. | Modals should open correctly on all platforms - where different dark mode/light mode styling is applied, this should be reflected in the modal. | Working as intended. |
+| Collapsable Content | Test that each modal's collapsable content (where applicable) extends and collapses correctly on desktop and mobile platforms. | All modals with collapsable content should collapse and expand. | Working as intended. Modals remembered individual state seperately from each other (i.e. if modal 3 was expanded, and then closed, the modal would remember that it was expanded when it was next opened) | 
+| Date Sensitive Content | On desktop, set the system time to a different date to test each day. On mobile, change the type on the system clock. Check if date has changed on the website. | Currently highlighted card should reflect the current date on the system clock.  | Working as intended. |
 
 ### Bugs
 - Tooltip does not show 'This day is not clickable' on inactive days. 
     - Cause: This is caused by the 'disabled' class having a 'pointer-events: none' property, which causes the tooltip not to fire.
+    
     - Fix: Remove the 'pointer events: none' property from the 'disabled' class. The 'cursor: not-allowed' property can remain to indicate to the user that the button is not clickable.
+- Tooltip was persistently displaying on mobile devices when it should have closed.
+
+    - Cause: There was no mechanism on mobile to 'defocus' the tooltip after pressing the card, which meant that it stayed on the screen.
+    - Fix: As mobile tooltips are generally inaccessible due to the lack of a hover function, tooltips have been disabled for mobile and tablet devices.
+
+- Tooltip disappears when moving the mouse.
+    - Cause: This was because the tooltip was wrapped around the front-image of the card; when the reverse image was inevitably shown and highlighted, it removed the tooltip.
+    - Fix: Wrap tooltip functionality around the entire card div element.
+
+- Animated background for the website was not playing on the Safari Browser.
+    - Cause: This is due to the way the Safari Browser behaves when it comes to autoplaying videos.
+    - Fix: Add a control for 'DisablePictureInPicture' to the video controls.
+
 
 ### Lighthouse Report
+#### Desktop Report
+![Desktop Lighthouse Report](/documentation/testing-images/desktop-lighthouse.png)
+
+#### Mobile Report
+![Mobile Lighthouse Report](/documentation/testing-images/mobile-lighthouse.png)
 
 ## Credits
 
@@ -128,6 +171,7 @@ We ultimately decided to go for the GIF content as we felt that this helped to '
 - [ThoughtCo & National Archive and Records Administration](https://www.thoughtco.com/germans-to-america-1421984) - Image of German Migrants for Migrant Day
 - [Emojipedia](https://emojipedia.org/) - Assets for reverse of cards
 - [Giphy](https://giphy.com/) - GIFs for cards without holidays
+- [Font Awesome](https://fontawesome.com/) - Icons and script for icon imports used for user controls.
 
 ### Libraries, Tools and Frameworks
 
@@ -150,7 +194,6 @@ We ultimately decided to go for the GIF content as we felt that this helped to '
 
 ### Contributors
 #### Team - The Ho Ho Homies:
-- Jamie Gargrave - https://github.com/Jamie-Gargrave
 - Linus Johansson - https://github.com/j0hanz
 - Tamanna Islam - https://github.com/farhatamannaislam
 - Anna Sahaidachna - https://github.com/Anka-S
