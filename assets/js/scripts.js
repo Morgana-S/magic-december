@@ -7,7 +7,7 @@ function toggleMute() {
 
   const muteButton = document.getElementById('mute-button');
   if (muteButton) {
-    muteButton.textContent = isMuted ? 'Unmute' : 'Mute';
+    muteButton.innerHTML = isMuted ? '<i class="fa-solid fa-volume-xmark"></i>' : '<i class="fa-solid fa-volume-high"></i>';
   }
 }
 
