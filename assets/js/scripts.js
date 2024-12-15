@@ -140,11 +140,37 @@ async function loadModals() {
   }
 }
 
+function setupReadMoreButtons() {
+  const readMoreButtons = document.querySelectorAll('.read_more');
+
+  readMoreButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+      const collapseTarget = this.getAttribute('data-bs-target');
+      const collapseElement = document.querySelector(collapseTarget);
+
+      if (collapseElement) {
+        collapseElement.addEventListener('shown.bs.collapse', () => {
+          this.textContent = 'Read less';
+        });
+
+        collapseElement.addEventListener('hidden.bs.collapse', () => {
+          this.textContent = 'Read more';
+        });
+      }
+
+      // Toggle button text immediately on click
+      this.textContent =
+        this.textContent === 'Read more' ? 'Read less' : 'Read more';
+    });
+  });
+}
+
 // Function to initialize the calendar by loading days and modals
 async function initialize() {
   await loadDays();
   enableCurrentDays();
   await loadModals();
+  setupReadMoreButtons();
 }
 
 initialize();
