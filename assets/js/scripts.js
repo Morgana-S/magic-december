@@ -3,8 +3,6 @@ let isMuted = false;
 // Function to toggle mute state
 function toggleMute() {
   isMuted = !isMuted;
-  console.log(`Mute toggled: ${isMuted}`); // Debugging log
-
   const muteButton = document.getElementById('mute-button');
   if (muteButton) {
     muteButton.innerHTML = isMuted
