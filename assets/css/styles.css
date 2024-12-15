@@ -41,11 +41,22 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .gif-background {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 /* custom button */
