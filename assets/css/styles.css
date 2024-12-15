@@ -66,18 +66,16 @@ h1 {
 
 .btn-custom:before {
   content: '';
-  background: linear-gradient(
-    90deg,
-    #ff6f61cc,
-    #ff9f40cc,
-    #ffdf00cc,
-    #40ff9fcc,
-    #61ff6fcc,
-    #9f40ffcc,
-    #df00ffcc,
-    #ff40dfcc,
-    #ff6f61cc
-  );
+  background: linear-gradient(90deg,
+      #ff6f61cc,
+      #ff9f40cc,
+      #ffdf00cc,
+      #40ff9fcc,
+      #61ff6fcc,
+      #9f40ffcc,
+      #df00ffcc,
+      #ff40dfcc,
+      #ff6f61cc);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -96,9 +94,11 @@ h1 {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }
@@ -118,7 +118,8 @@ h1 {
 
 .card {
   background-color: transparent !important;
-  perspective: 1000px; /* Enables 3D space for the rotation */
+  perspective: 1000px;
+  /* Enables 3D space for the rotation */
   padding: 0 !important;
   --bs-border-width: 0 !important;
 }
@@ -126,18 +127,16 @@ h1 {
 /* Glowing border effect for cards */
 .card:before {
   content: '';
-  background: linear-gradient(
-    90deg,
-    #ff6f61cc,
-    #ff9f40cc,
-    #ffdf00cc,
-    #40ff9fcc,
-    #61ff6fcc,
-    #9f40ffcc,
-    #df00ffcc,
-    #ff40dfcc,
-    #ff6f61cc
-  );
+  background: linear-gradient(90deg,
+      #ff6f61cc,
+      #ff9f40cc,
+      #ffdf00cc,
+      #40ff9fcc,
+      #61ff6fcc,
+      #9f40ffcc,
+      #df00ffcc,
+      #ff40dfcc,
+      #ff6f61cc);
   position: absolute;
   top: -3px;
   left: -3px;
@@ -155,7 +154,8 @@ h1 {
 /* Apply animation on hover */
 .card:hover:before {
   animation: glowing-card-animation 10s linear infinite;
-  opacity: 1; /* Show on hover */
+  opacity: 1;
+  /* Show on hover */
 }
 
 /* Glowing animation for the cards */
@@ -163,6 +163,7 @@ h1 {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 800% 0;
   }
@@ -197,18 +198,16 @@ h1 {
 /* Glowing border effect for flip-inner */
 .flip-inner:before {
   content: '';
-  background: linear-gradient(
-    90deg,
-    #ff6e618c,
-    #ffa040ad,
-    #ffdd00a1,
-    #40ffa0ab,
-    #61ff6ea2,
-    #a040ff9f,
-    #dd00ffa8,
-    #ff40df9c,
-    #ff6e61ad
-  );
+  background: linear-gradient(90deg,
+      #ff6e618c,
+      #ffa040ad,
+      #ffdd00a1,
+      #40ffa0ab,
+      #61ff6ea2,
+      #a040ff9f,
+      #dd00ffa8,
+      #ff40df9c,
+      #ff6e61ad);
   position: absolute;
   top: -3px;
   left: -3px;
@@ -226,7 +225,8 @@ h1 {
 /* Apply animation on hover */
 .card:hover .flip-inner:before {
   animation: glowing-card-animation 10s linear infinite;
-  opacity: 1; /* Show on hover */
+  opacity: 1;
+  /* Show on hover */
 }
 
 /* Glowing animation for the flip-inner */
@@ -234,6 +234,7 @@ h1 {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 800% 0;
   }
@@ -301,9 +302,11 @@ h1 {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }
@@ -320,13 +323,19 @@ h1 {
 
 /* Modal Header Styling */
 .modal-header {
-  background-color: #ff6f61; /* A vibrant color */
+  /* A vibrant color */
   border-bottom: 3px solid #ff3b2d !important;
   padding-top: 6rem !important;
   padding-bottom: 6rem !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   max-width: 100% !important;
+  background-color: #00000080;
+  background-blend-mode: overlay;
+}
+
+#not_a_holiday {
+  background-color: #ff6f61;
 }
 
 .modal-header .modal-title {
@@ -334,7 +343,6 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   color: #ffffff !important;
   font-weight: 600 !important;
-  background-color: #0000008a !important;
   line-height: 1.3 !important;
 }
 
@@ -424,23 +432,30 @@ h1 {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #fff; /* White background */
-  color: #dc3545; /* Bootstrap danger red */
-  border: 2px solid #dc3545; /* Red border */
-  border-radius: 30px; /* Rounded button */
+  background-color: #fff;
+  /* White background */
+  color: #dc3545;
+  /* Bootstrap danger red */
+  border: 2px solid #dc3545;
+  /* Red border */
+  border-radius: 30px;
+  /* Rounded button */
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   display: flex;
   align-items: center;
   cursor: pointer;
-  z-index: 1000; /* Ensure it stays on top */
+  z-index: 1000;
+  /* Ensure it stays on top */
   transition: all 0.3s ease-in-out;
 }
 
 .mute-btn:hover {
-  background-color: #dc3545; /* Red background on hover */
-  color: #fff; /* White text on hover */
+  background-color: #dc3545;
+  /* Red background on hover */
+  color: #fff;
+  /* White text on hover */
 }
 
 .mute-icon {
@@ -450,7 +465,8 @@ h1 {
 
 /* Optional: Add a subtle click effect */
 .mute-btn:active {
-  transform: scale(0.95); /* Slightly smaller when clicked */
+  transform: scale(0.95);
+  /* Slightly smaller when clicked */
 }
 
 /* Highlight Current Day */
@@ -463,6 +479,7 @@ h1 {
     box-shadow: 0 0 5px #ffdf00, 0 0 10px #ffdf00, 0 0 20px #ffdf00;
     transform: scale(1);
   }
+
   100% {
     box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 40px #ffdf00;
     transform: scale(1.05);
@@ -482,10 +499,12 @@ h1 {
 }
 
 @media (max-width: 350px) {
+
   .flip-front img,
   .flip-back img {
     padding: 0 !important;
   }
+
   .modal-header .modal-title {
     font-size: 1.5rem !important;
   }
