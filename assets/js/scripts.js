@@ -11,11 +11,33 @@ function toggleMute() {
   }
 }
 
+// Function to toggle dark mode
+function toggleDarkMode() {
+  const modalBodies = document.querySelectorAll('.modal-body');
+  modalBodies.forEach((modalBody) => {
+    modalBody.classList.toggle('bg-dark');
+    modalBody.classList.toggle('text-white');
+  });
+
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  if (darkModeToggle) {
+    darkModeToggle.innerHTML = modalBodies[0].classList.contains('bg-dark')
+      ? '<i class="fa-solid fa-sun fa-lg"></i>'
+      : '<i class="fa-solid fa-moon fa-lg"></i>';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   // Attach toggleMute to the mute button
   const muteButton = document.getElementById('mute-button');
   if (muteButton) {
     muteButton.addEventListener('click', toggleMute);
+  }
+
+  // Attach toggleDarkMode to the dark mode button
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', toggleDarkMode);
   }
 
   // Initialize the calendar
@@ -187,16 +209,17 @@ function manageTooltipsOnResize() {
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize tooltips for larger screens by default
   if (!window.matchMedia('(max-width: 768px)').matches) {
-    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltipEl) => {
-      new bootstrap.Tooltip(tooltipEl);
-    });
+    document
+      .querySelectorAll('[data-bs-toggle="tooltip"]')
+      .forEach((tooltipEl) => {
+        new bootstrap.Tooltip(tooltipEl);
+      });
   }
 
   // Add resize event listener
   manageTooltipsOnResize();
 });
 window.addEventListener('resize', manageTooltipsOnResize);
-
 
 // Function to initialize the calendar by loading days and modals
 async function initialize() {
