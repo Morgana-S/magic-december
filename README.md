@@ -131,6 +131,18 @@ As indicated in the lighthouse report below, we believe the performance of the s
 An effort was made to improve the performance of the site via the conversion of PNG files to WEBP format and resizing overly-large image assets, 
 but significant headway can still be made through more efficient importing of assets such as Google Fonts, the Bootstrap Framework templates, and Font Awesome icons.
 
+## Deployment Information
+### Deployment to GitHub Pages
+- The page was deployed in the early stages to GitHub pages. The steps to deploy are as follows:
+    - In the GitHub [Repository](https://github.com/Morgana-S/magic-december), click the settings option at the top of the page.
+    - Under 'Code and Automation' on the left side, click 'Pages'.
+    - Under 'Build and Deployment' > 'Source', choose 'Deploy from a Branch'. The chosen branch to deploy should be 'Main'. Save these settings.
+    - Back under the code section at the top of the page, view the deployments on the right hand side in the about section, and select the 'Github-Pages' Deployment.
+
+### Local Deployment
+- In order to make a local copy of this project, it can be cloned. In your IDE or git terminal, type the command below to clone this repository:
+    - `git clone https//github.com/Morgana-S/magic-december.git`
+
 ## Testing & Bugs
 
 ### Manual Testing
@@ -179,6 +191,7 @@ Below is a systematic list of tests carried out while testing the website's feat
 ![HTML Validation](/documentation/testing-images/html-validation.png)
 
 #### CSS Validation
+![CSS Validation](/documentation/testing-images/css-validation.png)
 
 #### JSHint Validation
 ![JSHint Validation](/documentation/testing-images/jshint-validation.png)
