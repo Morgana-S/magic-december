@@ -511,6 +511,33 @@ a {
   width: 50%;
 }
 
+.error-container {
+  background: linear-gradient(
+    to right,
+    #590000,
+    #6f0000,
+    #880000,
+    #a30000,
+    #d32f2f
+  );
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+}
+
+.error-container p {
+  color: #fff;
+  text-align: center;
+  font-family: 'Vesper Libre', sans-serif;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.error-container a {
+  text-decoration:underline;
+}
+
 /* Optional: Add a subtle click effect */
 .mute-btn:active {
   transform: scale(0.95);
