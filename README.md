@@ -8,17 +8,25 @@ Our issues tracker can be accessed here: https://github.com/users/Morgana-S/proj
 
 ## Criteria
 ### The project fits the theme of celebrating the holidays.
-- Our project is focused on not only celebrating Christmas, but the variety of holidays and festivals that are celebrated around the world. With each day on the calendar, we have tried to provide a relevant celebration that occurs on that day; however, we have also chosen several major celebrations that occur at different times of the year. While Christmas is the main holiday that people are thinking about right now, there's no reason not to maintain that festive spirit throughout the year. 
+- Our project is focused on not only celebrating Christmas, but the variety of holidays and festivals that are celebrated around the world. 
+With each day on the calendar, we have tried to provide a relevant celebration that occurs on that day.
+
 ### The project is well planned and executed (Using GitHub Projects/Kanban)
-- Project management was carried out through GitHub Projects, the issues page, and Slack. Regular huddles were carried out on slack to ensure that people were happy with their responsibilities and that there weren't any blockers in the way of progress. We deployed to GitHub pages early to allow us to view the website in a deployed version for the purposes of testing and feedback.
+- Project management was carried out through GitHub Projects, the issues page, and Slack. 
+Regular huddles were carried out on Slack to ensure that people were happy with their responsibilities and that there weren't any blockers in the way of progress. 
+We deployed to GitHub pages early to allow us to view the website in a deployed version for the purposes of testing and feedback.
+
 ### The project has a basic README that follows the provided template.
 - The README file was constructed early in the project and updated with features, credit and information regularly to ensure it kept pace with the project. 
 
 ### The project has an overall sense of completeness.
-- We focused on getting a version of the site deployed early, using GitHub Projects to prioritise essential work and issues. After we had the foundation of the site down, we then proceeded to work on polishing existing functionality.
+- We focused on getting a version of the site deployed early, using GitHub Projects to prioritise essential work and issues. 
+After we had the foundation of the site down, we then proceeded to work on polishing existing functionality.
 
 ### The project showcases a strong sense of creativity and originality.
-- We believe that our project derives its purpose from the true core of the holiday period - a sense of inclusivity, festivity and togetherness. We took information provided by websites that specialise in the subject matter, formatted the content in a way that makes it accessible and exciting the end-user to view, and we gave the user the ability to find out more information if they desire. We strongly feel this kindles the thirst for knowledge and understanding of other cultures and ways of celebrating the festive period in an original way.
+- We believe that our project derives its purpose from the true core of the holiday period - a sense of inclusivity, festivity and togetherness. 
+We took information provided by websites that specialise in the subject matter, formatted the content in a way that makes it accessible and exciting the end-user to view, and we gave the user the ability to find out more information if they desire. 
+We strongly feel this kindles the thirst for knowledge and understanding of other cultures and ways of celebrating the festive period in an original way.
 
 ## About
 Magic December is a festive, advent-style calendar with selectable cards. 
@@ -46,12 +54,14 @@ Our project is unique as it uses the motif of a local holiday tradition (advent 
 The wireframes for the website's design can be found [here.](/documentation/wireframes/magic-december.pdf)
 The wireframes for this project are very rudimentary and designed to give us a foundational idea on how to structure the website. 
 Early in the project, the team decided to use Bootstrap as a framework for the site's design. 
-This allowed the use of the in-built class templates to provide a mobile-first, responsively designed site. 
+This allowed the use of the in-built templates to provide a mobile-first, responsively designed site. 
 
 The website was designed as a celebration of festivals and holidays around the world - however, given the timing of the project as being incepted close to  Christmas, we decided to use Christmas-y colours such as red, green and off-white for our design.
 These colours evoke imagery of the holiday season (particularly of Santa Claus and elves) and are designed to remind the user of the purpose of the site.
 
-While the wireframes themselves were rudimentary, regular discussion was had between the team members on the appearance of the site via Slack; the overall appearance of the website was a collaborative effort with the wireframes being designed by Morgana and Anna contributing assets for the design of the cards using Canva and Adobe Firefly.
+While the wireframes themselves were rudimentary, regular discussion was had between the team members on the appearance of the site via Slack; 
+the overall appearance of the website was a collaborative effort with the wireframes being designed by Morgana and Anna contributing assets 
+for the design of the cards using Canva and Adobe Firefly.
 
 ## User Stories
 **First Time Visitors:**
@@ -101,7 +111,9 @@ The site highlights the current day of the month for December - for example, the
 
 ## Notable Challenges
 ### Functionality
-Discussions were held at regular intervals about the scope and functionality of the site. We decided early on to expand the scope of the project from the traditional 25 day advent calendar to a full month of holiday celebrations. However, we noted that some days of the month of December do not have any notable holidays. We discussed addressing this issue in two ways:
+Discussions were held at regular intervals about the scope and functionality of the site. 
+We decided early on to expand the scope of the project from the traditional 25 day advent calendar to a full month of holiday celebrations. 
+However, we noted that some days of the month of December do not have any notable holidays. We discussed addressing this issue in two ways:
 
 - Having notable festivals from other times of the year, such as Diwali, Hannukah, and Eid, stand in for those days. 
 - Using GIFs and short-form paragraphs to fill the days without holidays.
@@ -109,11 +121,15 @@ Discussions were held at regular intervals about the scope and functionality of 
 We ultimately decided to go for the GIF content as we felt that this helped to 'break-up' the format of the content on the other cards.
 
 ### Design
-In our team huddles, there were often changes from the original wireframes and even changes to the project name; this demonstrates that we could have had a more sizeable planning period that would allow us to have worked the finer details out in advance. Implementing a better planning phase would likely have saved time in both documenting and implementing changes.
+In our team huddles, there were often changes from the original wireframes and even changes to the project name; 
+this demonstrates that we could have had a more sizeable planning period that would allow us to have worked the finer details out in advance. 
+Implementing a better planning phase would likely have saved time in both documenting and implementing changes.
 
 ### Performance
 
-As indicated in the lighthouse report below, we believe the performance of the site can be improved significantly. An effort was made to improve the performance of the site via the conversion of PNG files to WEBP format and resizing overly-large image assets, but significant headway can still be made through more efficient importing of assets such as Google Fonts, the Bootstrap Framework templates, and Font Awesome icons.
+As indicated in the lighthouse report below, we believe the performance of the site can be improved significantly. 
+An effort was made to improve the performance of the site via the conversion of PNG files to WEBP format and resizing overly-large image assets, 
+but significant headway can still be made through more efficient importing of assets such as Google Fonts, the Bootstrap Framework templates, and Font Awesome icons.
 
 ## Testing & Bugs
 
