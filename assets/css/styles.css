@@ -343,7 +343,6 @@ a {
 
 /* Modal Content */
 .modal-content {
-  border-radius: none !important;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
   border: none !important;
   overflow: hidden !important;
@@ -550,6 +549,14 @@ a {
   animation: treasure-glow 1s ease-in-out infinite alternate;
 }
 
+.fa-copyright {
+  color: #880000;
+}
+
+.footer-custom {
+  font-size: 1.2rem;
+}
+
 @keyframes treasure-glow {
   0% {
     box-shadow: 0 0 5px #ffdf00, 0 0 10px #ffdf00, 0 0 20px #ffdf00;
@@ -573,6 +580,10 @@ a {
   .card-31 {
     width: 100%;
   }
+
+  .footer-custom {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 350px) {
@@ -582,5 +593,9 @@ a {
   }
   .modal-header .modal-title {
     font-size: 1.5rem !important;
+  }
+
+  .footer-custom {
+    font-size: 0.8rem;
   }
 }
