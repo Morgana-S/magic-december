@@ -1,5 +1,25 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Body */
+body {
+  font-family: 'Merriweather', serif !important;
+}
+
+/* Heading */
+h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Anchor */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Background Video */
 .background-video {
   position: fixed;
   top: 0;
@@ -11,14 +31,22 @@
   background-color: #000;
 }
 
+/* Scrollbar */
 *::-webkit-scrollbar {
   width: 1rem !important;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #dc3545;
+  background: linear-gradient(
+    to right,
+    #590000,
+    #6f0000,
+    #880000,
+    #a30000,
+    #d32f2f
+  );
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   border-radius: 3px;
 }
 
@@ -33,21 +61,7 @@
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-body {
-  font-family: 'Vesper Libre', serif;
-}
-
-h1 {
-  color: white;
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
+/* GIF Background */
 .gif-background {
   display: block;
   max-width: 100%;
@@ -55,13 +69,14 @@ a {
   margin: 0 auto;
 }
 
+/* Controls Container */
 .controls-container {
   display: flex;
   justify-content: space-between;
   align-content: center;
 }
 
-/* custom button */
+/* Custom Button */
 .btn-custom {
   width: 3.5rem;
   height: 2.5rem;
@@ -80,16 +95,18 @@ a {
 
 .btn-custom:before {
   content: '';
-  background: linear-gradient(90deg,
-      #ff6f61cc,
-      #ff9f40cc,
-      #ffdf00cc,
-      #40ff9fcc,
-      #61ff6fcc,
-      #9f40ffcc,
-      #df00ffcc,
-      #ff40dfcc,
-      #ff6f61cc);
+  background: linear-gradient(
+    90deg,
+    #ff6f61cc,
+    #ff9f40cc,
+    #ffdf00cc,
+    #40ff9fcc,
+    #61ff6fcc,
+    #9f40ffcc,
+    #df00ffcc,
+    #ff40dfcc,
+    #ff6f61cc
+  );
   position: absolute;
   top: -2px;
   left: -2px;
@@ -108,11 +125,9 @@ a {
   0% {
     background-position: 0 0;
   }
-
   50% {
     background-position: 400% 0;
   }
-
   100% {
     background-position: 0 0;
   }
@@ -124,33 +139,41 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #dc3545;
+  background: linear-gradient(
+    to right,
+    #590000,
+    #6f0000,
+    #880000,
+    #a30000,
+    #d32f2f
+  );
   left: 0;
   top: 0;
   border-radius: 10px;
 }
 
+/* Card */
 .card {
   background-color: transparent !important;
   perspective: 1000px;
-  /* Enables 3D space for the rotation */
   padding: 0 !important;
   --bs-border-width: 0 !important;
 }
 
-/* Glowing border effect for cards */
 .card:before {
   content: '';
-  background: linear-gradient(90deg,
-      #ff6f61cc,
-      #ff9f40cc,
-      #ffdf00cc,
-      #40ff9fcc,
-      #61ff6fcc,
-      #9f40ffcc,
-      #df00ffcc,
-      #ff40dfcc,
-      #ff6f61cc);
+  background: linear-gradient(
+    90deg,
+    #ff6f61cc,
+    #ff9f40cc,
+    #ffdf00cc,
+    #40ff9fcc,
+    #61ff6fcc,
+    #9f40ffcc,
+    #df00ffcc,
+    #ff40dfcc,
+    #ff6f61cc
+  );
   position: absolute;
   top: -3px;
   left: -3px;
@@ -165,25 +188,20 @@ a {
   opacity: 0;
 }
 
-/* Apply animation on hover */
 .card:hover:before {
   animation: glowing-card-animation 10s linear infinite;
   opacity: 1;
-  /* Show on hover */
 }
 
-/* Glowing animation for the cards */
 @keyframes glowing-card-animation {
   0% {
     background-position: 0 0;
   }
-
   100% {
     background-position: 800% 0;
   }
 }
 
-/* Inner shadow effect */
 .card:after {
   content: '';
   position: absolute;
@@ -196,7 +214,7 @@ a {
   z-index: -1;
 }
 
-/* The element that will rotate */
+/* Flip Inner */
 .flip-inner {
   height: 13rem;
   position: relative;
@@ -209,19 +227,20 @@ a {
   touch-action: manipulation;
 }
 
-/* Glowing border effect for flip-inner */
 .flip-inner:before {
   content: '';
-  background: linear-gradient(90deg,
-      #ff6e618c,
-      #ffa040ad,
-      #ffdd00a1,
-      #40ffa0ab,
-      #61ff6ea2,
-      #a040ff9f,
-      #dd00ffa8,
-      #ff40df9c,
-      #ff6e61ad);
+  background: linear-gradient(
+    90deg,
+    #ff6e618c,
+    #ffa040ad,
+    #ffdd00a1,
+    #40ffa0ab,
+    #61ff6ea2,
+    #a040ff9f,
+    #dd00ffa8,
+    #ff40df9c,
+    #ff6e61ad
+  );
   position: absolute;
   top: -3px;
   left: -3px;
@@ -236,25 +255,11 @@ a {
   opacity: 0;
 }
 
-/* Apply animation on hover */
 .card:hover .flip-inner:before {
   animation: glowing-card-animation 10s linear infinite;
   opacity: 1;
-  /* Show on hover */
 }
 
-/* Glowing animation for the flip-inner */
-@keyframes glowing-card-animation {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 800% 0;
-  }
-}
-
-/* Inner shadow effect */
 .flip-inner:after {
   content: '';
   position: absolute;
@@ -267,19 +272,17 @@ a {
   z-index: -1;
 }
 
-/* Flip on hover with moving border effect */
 .card:hover .flip-inner {
   transform: rotateY(180deg);
   animation: moving-border 1s linear infinite;
 }
 
-/* Flip on click with 720-degree rotation effect */
 .card:active .flip-inner {
   transform: rotateY(900deg);
   transition: transform 2s ease;
 }
 
-/* Front and back faces */
+/* Flip Front and Back */
 .flip-front,
 .flip-back {
   position: absolute;
@@ -293,11 +296,26 @@ a {
 }
 
 .flip-front {
-  background-color: #e70b0bb9;
+  background: linear-gradient(
+    to right,
+    #590000,
+    #6f0000,
+    #880000,
+    #a30000,
+    #d32f2f
+  );
 }
 
 .flip-back {
-  background-color: #e70b0bb9;
+  background: linear-gradient(
+    to left,
+    #590000,
+    #6f0000,
+    #880000,
+    #a30000,
+    #d32f2f
+  );
+
   transform: rotateY(180deg);
 }
 
@@ -311,33 +329,28 @@ a {
   object-fit: contain;
 }
 
-/* Keyframes for moving border effect */
 @keyframes moving-border {
   0% {
     background-position: 0 0;
   }
-
   50% {
     background-position: 400% 0;
   }
-
   100% {
     background-position: 0 0;
   }
 }
 
-/* Modal Content Styling */
+/* Modal Content */
 .modal-content {
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
-  border: none;
-  overflow: hidden;
+  border-radius: none !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
+  border: none !important;
+  overflow: hidden !important;
 }
 
-/* Modal Header Styling */
+/* Modal Header */
 .modal-header {
-  /* A vibrant color */
   border-bottom: 3px solid #ff3b2d !important;
   padding-top: 6rem !important;
   padding-bottom: 6rem !important;
@@ -369,32 +382,19 @@ a {
   color: #000;
 }
 
-.read_more {
-  background-color: transparent;
-  color: #ff6f61;
-  border-color: #ff6f61;
-}
-
-.read_more:hover {
-  background-color: #ff6f61;
-  border-color: #ff6f61;
-
-}
-
-/* Modal Body Styling */
+/* Modal Body */
 .modal-body {
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
+  border: none !important;
+  padding: 15px !important;
   color: #333;
-  line-height: 1.6;
   background-color: #fff;
-  font-family: "Merriweather", serif;
-  ;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6 !important;
 }
 
 .modal-body h5 {
   color: #ff6f61;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -419,16 +419,19 @@ a {
   width: 95%;
 }
 
-/* Card Description */
-.modal-body .card-description {
-  margin-top: 15px;
-  font-style: italic;
-  background-color: #fff5f5;
-  padding: 10px;
-  border-left: 3px solid #ff6f61;
-  border-radius: 5px;
+/* Read More Button */
+.read_more {
+  background-color: transparent;
+  color: #ff6f61;
+  border-color: #ff6f61;
 }
 
+.read_more:hover {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+}
+
+/* Custom Close Button */
 .btn-close-custom {
   position: absolute;
   top: 0;
@@ -439,7 +442,7 @@ a {
   color: white;
   cursor: pointer;
   opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   background-color: #00000080;
   border-radius: 0 0 0 50rem !important;
   height: 48px !important;
@@ -458,31 +461,27 @@ a {
   color: #ff6f61;
 }
 
-/* Animations */
+/* Modal Fade Animation */
 .modal.fade .modal-dialog {
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  transform: translateY(-50px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transform: translateZ(50px);
   opacity: 0;
 }
 
 .modal.fade.show .modal-dialog {
-  transform: translateY(0);
+  transform: translateZ(0);
   opacity: 1;
 }
 
-/* Mute Button Styles */
+/* Mute Button */
 .mute-btn {
   position: fixed;
   top: 20px;
   right: 20px;
   background-color: #fff;
-  /* White background */
   color: #dc3545;
-  /* Bootstrap danger red */
   border: 2px solid #dc3545;
-  /* Red border */
   border-radius: 30px;
-  /* Rounded button */
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
@@ -490,15 +489,12 @@ a {
   align-items: center;
   cursor: pointer;
   z-index: 1000;
-  /* Ensure it stays on top */
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .mute-btn:hover {
   background-color: #dc3545;
-  /* Red background on hover */
   color: #fff;
-  /* White text on hover */
 }
 
 .mute-icon {
@@ -506,6 +502,11 @@ a {
   font-size: 18px;
 }
 
+.mute-btn:active {
+  transform: scale(0.95);
+}
+
+/* Card-31 */
 .card-31 {
   margin: 0 auto;
   width: 50%;
@@ -554,20 +555,18 @@ a {
     box-shadow: 0 0 5px #ffdf00, 0 0 10px #ffdf00, 0 0 20px #ffdf00;
     transform: scale(1);
   }
-
   100% {
     box-shadow: 0 0 10px #ffdf00, 0 0 20px #ffdf00, 0 0 40px #ffdf00;
     transform: scale(1.05);
   }
 }
 
-/* Responsive Styling */
+/* Responsive */
 @media (max-width: 768px) {
   .modal-content {
     width: 90%;
     margin: auto;
   }
-
   .modal-body {
     padding: 15px;
   }
@@ -577,12 +576,10 @@ a {
 }
 
 @media (max-width: 350px) {
-
   .flip-front img,
   .flip-back img {
     padding: 0 !important;
   }
-
   .modal-header .modal-title {
     font-size: 1.5rem !important;
   }
