@@ -173,6 +173,16 @@ Below is a systematic list of tests carried out while testing the website's feat
 #### Mobile Report
 ![Mobile Lighthouse Report](/documentation/testing-images/mobile-lighthouse.png)
 
+### Code Validation
+
+#### HTML W3C Validator
+![HTML Validation](/documentation/testing-images/html-validation.png)
+
+#### CSS Validation
+
+#### JSHint Validation
+![JSHint Validation](/documentation/testing-images/jshint-validation.png)
+
 ## Credits
 
 ### Content
